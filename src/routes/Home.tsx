@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Movie from '../components/Movie';
 
 function Home() {
-	const [loading, setLoading] = useState(true);
-	const [movies, setMovies] = useState([]);
+	const [loading, setLoading] = useState<boolean>(true);
+	const [movies, setMovies] = useState<any[]>([]);
 	const getMovies = async () => {
 		const json = await (
 			await fetch(
@@ -23,7 +23,7 @@ function Home() {
 				<h1>Loading..</h1>
 			) : (
 				<div>
-					{movies.map((movie) => (
+					{movies.map((movie : any) => (
 						<Movie
 							key={movie.id}
 							id={movie.id}
