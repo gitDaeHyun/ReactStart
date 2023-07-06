@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Movie from '../components/Movie';
-
+import {Iprops} from '../components/Movie'
 function Home() {
 	const [loading, setLoading] = useState<boolean>(true);
-	const [movies, setMovies] = useState<any[]>([]);
+	const [movies, setMovies] = useState<Iprops[]>([]);
 	const getMovies = async () => {
 		const json = await (
 			await fetch(
@@ -16,14 +16,14 @@ function Home() {
 	useEffect(() => {
 		getMovies();
 	}, []);
-	console.log(movies);
+	
 	return (
 		<div>
 			{loading ? (
 				<h1>Loading..</h1>
 			) : (
 				<div>
-					{movies.map((movie : any) => (
+					{movies.map((movie : Iprops) => (
 						<Movie
 							key={movie.id}
 							id={movie.id}
