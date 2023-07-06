@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "target": "es5",
+      "target": "es5", // 트랜스파일할 대상 자바스크립트의 버전 설정 -> 대부분 es5
       "lib": [
         "dom",
         "dom.iterable",
@@ -8,13 +8,13 @@
       ],
       "allowJs": true,
       "skipLibCheck": true,
-      "esModuleInterop": true,
+      "esModuleInterop": true, // 외부 모듈 사용 -> True 
       "allowSyntheticDefaultImports": true,
       "strict": true,
       "forceConsistentCasingInFileNames": true,
       "noFallthroughCasesInSwitch": true,
-      "module": "esnext",
-      "moduleResolution": "node",
+      "module": "esnext", // 웹 브라우저에서 동작 amd, 노드js에서 동작 commonjs
+      "moduleResolution": "node", // module의 값이 commonjs이면 node.js에서 동작하므로 항상 node -> module이 amd이면 항상 classic으로 설정
       "resolveJsonModule": true,
       "isolatedModules": true,
       "noEmit": true,
