@@ -1,4 +1,4 @@
-import "./styles/navigation.css";
+
 import { Link } from "react-router-dom";
 
 interface NavProps {

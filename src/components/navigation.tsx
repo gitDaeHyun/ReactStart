@@ -1,7 +1,9 @@
-import "./styles/navigation.css";
+
+import styled from 'styled-components'
 import { useState } from "react";
-import { withRouter } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
 import NavItem from "./navItem";
+
 
 function Navigation(): JSX.Element {
   const [menuToggle, setMenuToggle] = useState<boolean>(false);
@@ -34,7 +36,7 @@ function Navigation(): JSX.Element {
       >
         <div className="menu__list">
           {menu.map((data) => (
-            <NavItem
+            <NavItem 
               data={data}
               key={data.address}
               offNav={() => setMenuToggle(false)}
